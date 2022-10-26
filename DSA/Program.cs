@@ -15,8 +15,9 @@ void printArray(int[] arr)
     int n = arr.Length;
     for (int i = 0; i < n; ++i)
         Console.Write(arr[i] + " ");
-    Console.Read();
+    Console.ReadLine();
 }
-var input = Console.ReadLine();
+var input = Console.ReadLine()??"";
 
-Console.WriteLine(string.Concat(StackExamples.GetPostFix(input??"")));
+Console.WriteLine(string.Concat(StackExamples.GetPostFix(input)));
+Console.WriteLine(StackExamples.GetInFixResult(input));
